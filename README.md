@@ -1,6 +1,7 @@
 # Classroom-Connect
 ---
 ## Project Description
+
 Welcome to Classroom-Connect | Effective communication between student, teacher and parents.
 ---
 ## Installation
