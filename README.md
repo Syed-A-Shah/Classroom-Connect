@@ -2,7 +2,8 @@
 ---
 ## Project Description
 
-Welcome to Classroom-Connect | Effective communication between student, teacher and parents.
+Welcome to Classroom-Connect  Effective communication between student, teacher and parents.
+
 ---
 ## Installation
 
@@ -24,6 +25,7 @@ First, clone this repository. Then:
 - [Heroku](https://www.heroku.com/) - a cloud platform service
 - [SimpleCov](https://github.com/colszowka/simplecov) - a code coverage analysis tool for Ruby
 - [RubyCritic](https://github.com/whitesmith/rubycritic) - a code quality analysis tool for Ruby
+- [GitKraken](https://www.gitkraken.com) 
 ---
 ## Development Team
 
