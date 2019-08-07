@@ -1,4 +1,4 @@
-class CreateHomeworks < ActiveRecord::Migration[5.2]
+class Createhomeworks < ActiveRecord::Migration[5.2]
   def change
     create_table :homeworks do |t|
       t.string :caption

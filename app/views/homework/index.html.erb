@@ -1,1 +1,8 @@
 <h1> Classroom Connect </h1>
+<h2> Below are all the recent published homeworks: </h2>
+<% @homeworks.each do |homework| %>
+  <div class="image_tag">
+    <%= image_tag homework.document.url %>
+  </div>
+  <%= homework.caption %>
+<% end %>

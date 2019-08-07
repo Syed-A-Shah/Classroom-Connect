@@ -1,5 +1,13 @@
-<%= simple_form_for @homework do |f| %>
-  <%= f.input :document %>
-  <%= f.input :caption %>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Classroom Connect</title>
+</head>
+<body>
+ <%= simple_form_for @homeworks do |f| %>
+  <%= f.input  :document %>
+  <%= f.input  :caption %>
   <%= f.button :submit %>
-<% end %>
+ <% end %>
+</body>
+</html>

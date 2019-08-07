@@ -1,4 +1,4 @@
-class AddAttachmentDocumentToHomeworks < ActiveRecord::Migration[5.2]
+class AddAttachmentDocumentTohomeworks < ActiveRecord::Migration[5.2]
   def self.up
     change_table :homeworks do |t|
       t.attachment :document
