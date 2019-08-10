@@ -5,6 +5,15 @@ class HomeworksController < ApplicationController
     @homeworks = Homework.all
   end
 
+  def edit
+    if current_user.id == @homework.user_id
+      @homework.update(post_params)
+      redirect_to @homework, notice: 'update successful'
+    else
+      redirect_to homeworks_path, notice: 'You cannot edit that post, you snake!'
+    end
+  end
+
   def new
     @homework = current_user.homeworks.build
   end

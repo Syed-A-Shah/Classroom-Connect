@@ -3,6 +3,8 @@
 <h1> Here are all the recent homework: </h1>
 <% @homeworks.each do |homework| %>
   <%= homework.user.email %>
-  <%= image_tag homework.hw.url %>
+  <%= image_tag homework.hw.url(:medium) %>
   <%= homework.caption %>
-<% end %>
+  <%# <% if user_signed_in? %>
+  <!-- <td><%= link_to 'Edit', edit_homework_path(homework) %></td> %> -->
+  <% end %>
