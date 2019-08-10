@@ -3,17 +3,16 @@ class HomeworksController < ApplicationController
         @homeworks = Homework.all
     end
     def new
-        @homework = Homework.new
+        @homework = current_user.homeworks.build
     end
     def create
-        @homework = Homework.create(post_params)
+        @homework = current_user.homeworks.create(post_params)
         redirect_to '/homeworks'
       end
     private
 
     def post_params
-        params.require(:homework).permit(:hw, :caption)
+        params.require(:homework).permit(:hw, :caption,)
     end
 
 end
-
