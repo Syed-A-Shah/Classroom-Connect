@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_08_215833) do
+ActiveRecord::Schema.define(version: 2019_08_09_224732) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "homeworks", force: :cascade do |t|
+    t.string "caption"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "hw_file_name"
+    t.string "hw_content_type"
+    t.bigint "hw_file_size"
+    t.datetime "hw_updated_at"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

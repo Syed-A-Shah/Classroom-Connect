@@ -1,0 +1,7 @@
+<%= link_to 'Sign out', destroy_user_session_path,
+    method: :delete %>
+<h1> Here are all the recent homework: </h1>
+<% @homeworks.each do |homework| %>
+  <%= image_tag homework.hw.url %>
+  <%= homework.caption %>
+<% end %>
