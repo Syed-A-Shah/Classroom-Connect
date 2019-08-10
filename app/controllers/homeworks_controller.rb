@@ -11,9 +11,15 @@ class HomeworksController < ApplicationController
 
   def create
     @homework = current_user.homeworks.create(post_params)
-    redirect_to '/homeworks'
+    redirect_to homeworks_path
+    # if @homework.save
+    #   flash[:success] = "Your homework has been uploaded successfully!"
+    # else
+    #   flash[:alert] = "Your homework couldn't be uploaded!  Please check the form."
+    #   render :new
+    # end
   end
-  
+
   private
 
   def post_params
