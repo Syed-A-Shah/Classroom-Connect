@@ -1,5 +1,5 @@
 <h1> Here are all the recent homework: </h1>
 <% @homeworks.each do |homework| %>
-  <%= image_tag homework.hw.url(:medium) %>
+  <%= image_tag homework.hw.url %>
   <%= homework.caption %>
 <% end %>

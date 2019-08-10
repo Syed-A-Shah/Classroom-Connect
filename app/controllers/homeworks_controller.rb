@@ -12,7 +12,7 @@ class HomeworksController < ApplicationController
     private
 
     def post_params
-        params.require(:homework).permit(:homework, :caption)
+        params.require(:homework).permit(:hw, :caption)
     end
 
 end
