@@ -32,12 +32,6 @@ class HomeworksController < ApplicationController
 
   def show
     @homework = Homework.find(params[:id])
-    if @homework.user.id == current_user.id
-      link_to "Cancel", posts_path
-      link_to "Edit Post", edit_homework_path(@homework)
-    else
-      link_to "Cancel", homeworks_path
-    end
   end
 
   def owned_post
