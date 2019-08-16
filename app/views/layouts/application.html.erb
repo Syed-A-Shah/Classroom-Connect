@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ClassroomConnect</title>
+    <title>Classroom Connect</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -19,7 +19,7 @@
             <span class="icon-bar"></span>
           </button>
           <div class="navbar-brand">
-            <%= link_to "Classroom Connect", root_path %>
+            <%= link_to "Classroom Connect", homeworks_path %>
           </div>
         </div>
         <div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
@@ -33,10 +33,13 @@
             <li>
               <%= link_to 'Sign Up', new_user_registration_path %>
             </li>
-          </ul>
+            <li>
+              <%= link_to 'Log Out', destroy_user_session_path,
+                  method: :delete if current_user %>
+            </li>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
     <% render 'layouts/alerts' %>
     <%= yield %>
   </body>

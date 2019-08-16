@@ -1,5 +1,6 @@
 class HomeworksController < ApplicationController
   before_action :authenticate_user!
+  before_action :owned_post, only: [:edit, :update, :destroy]
 
   def index
     @homeworks = Homework.all.reverse
@@ -27,6 +28,23 @@ class HomeworksController < ApplicationController
     #   flash[:alert] = "Your homework couldn't be uploaded!  Please check the form."
     #   render :new
     # end
+  end
+
+  def show
+    @homework = Homework.find(params[:id])
+    if @homework.user.id == current_user.id
+      link_to "Cancel", posts_path
+      link_to "Edit Post", edit_homework_path(@homework)
+    else
+      link_to "Cancel", homeworks_path
+    end
+  end
+
+  def owned_post
+    unless current_user == @post.user
+      flash[:alert] = "That post doesn't belong to you!"
+      redirect_to root_path
+    end
   end
 
   private
