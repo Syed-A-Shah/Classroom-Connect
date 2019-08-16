@@ -1,4 +1,6 @@
 class Homework < ApplicationRecord
+    belongs_to :user
+
     has_attached_file :hw
 
     has_attached_file :hw, styles: { :medium => "640x" }
