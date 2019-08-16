@@ -4,10 +4,18 @@
     <title>Classroom Connect</title>
 </head>
 <body>
-<%= simple_form_for @homework do |f| %>
-  <%= f.input :hw %>
-  <%= f.input :caption %>
-  <%= f.button :submit %>
-<% end %>
+<div class="form-wrapper">
+  <%= simple_form_for @homework, html: { class: 'form-horizontal', multipart: true } do |f| %>
+    <div class="form-group">
+      <%= f.input :hw %>
+    </div>
+    <div class="form-group text-center">
+      <%= f.input :caption %>
+    </div>
+    <div class="form-group text-center">
+      <%= f.button :submit, class: 'btn-success' %>
+    </div>
+  <% end %>
+</div>
 </body>
 </html>
