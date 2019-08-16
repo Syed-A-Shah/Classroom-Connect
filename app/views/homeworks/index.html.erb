@@ -1,8 +1,24 @@
 <%= link_to 'Sign out', destroy_user_session_path,
     method: :delete %>
-<h1> Here are all the recent homework: </h1>
-<% @homeworks.each do |homework| %>
-  <%= homework.user.email %>
-  <%= image_tag homework.hw.url(:medium) %>
-  <%= homework.caption %>
+<style>
+  div.a {
+    text-align: center;
+
+  }
+  </style>
+<div class="a"> <h1>Homework</div>
+  <% @homeworks.each do |homework| %>
+  <div class="post">
+      <div class="post-head">
+        <%= homework.user.email %>
+        <div class="name">
+        </div>
+      </div>
+      <div class="image center-block">
+      <%= image_tag homework.hw.url(:medium) %>
+      </div>
+        <p class="caption">
+        <%= homework.caption %>
+        </p>
+    </div>
   <% end %>
